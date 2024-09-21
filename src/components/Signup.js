@@ -21,13 +21,17 @@ const Signup = (props) => {
         e.preventDefault();
         
         if(cred.password === cred.cpassword){
+
+          const reqBody = {name : cred.name, email : cred.email,password : cred.password};
+
+          console.log(reqBody);
                 // making req to create user
             const response = await fetch(`http://localhost:3700/api/auth/createUser`, {
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
                 headers: {
                 'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({name : cred.name, email : cred.email,password : cred.password}) // body data type must match "Content-Type" header
+                body: JSON.stringify(reqBody) // body data type must match "Content-Type" header
             }); 
             const json = await response.json()
 
@@ -35,7 +39,7 @@ const Signup = (props) => {
             if(json.success){
                 // save auth token and redirect to homepage 
                 localStorage.setItem("token",json.authToken);
-                navigate("/notes");
+                navigate("/quiz");
                 // show success alert
                 props.displayAlert("Welcome to Cloud-Notes !","Success");
                 // set is loggedin to true (to manipulate navbar)

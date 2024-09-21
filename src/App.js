@@ -21,6 +21,22 @@ const App = ()=>{
     (localStorage.getItem("token"))?setIsLoggedIn(true):setIsLoggedIn(false);
   
   }, [])
+
+  // useEffect(() => {
+  //   // Update the page title
+  //   document.title = "Edu Discover";
+
+  //   // Update or create a meta tag
+  //   const metaDescription = document.querySelector('meta[name="description"]');
+  //   if (metaDescription) {
+  //     metaDescription.setAttribute("content", "A ");
+  //   } else {
+  //     const newMeta = document.createElement('meta');
+  //     newMeta.name = 'description';
+  //     newMeta.content = 'A new description';
+  //     document.head.appendChild(newMeta);
+  //   }
+  // }, []);
   
 
   const [emptyDivNeeded, setEmptyDivNeeded] = useState(true);
@@ -48,7 +64,7 @@ const App = ()=>{
 
 
   return (
-  <div style={{minHeight : "100vh", backgroundColor:"#0a243d"}}>
+  <div style={{minHeight : "100vh", backgroundColor:"#ECEDED"}}>
     <NoteState>
     <BrowserRouter>
       <Navbar isLoggedIn = {isLoggedIn} toggleIsLoggedIn = {toggleIsLoggedIn}/>
@@ -56,7 +72,7 @@ const App = ()=>{
       <div >
       <Routes>
         <Route exact path='/' element={<Welcome/>}/>
-        <Route exact path='/notes'  element={<div className='container mx-5'><Notes displayAlert = {displayAlert} emptyDivNeeded = {emptyDivNeeded}/></div>} />
+        <Route exact path='/quiz'  element={<div className='container mx-5'><Notes displayAlert = {displayAlert} emptyDivNeeded = {emptyDivNeeded}/></div>} />
         <Route exact path='/about' element={<About/>} />
         <Route exact path='/login' element={<Login displayAlert = {displayAlert} toggleIsLoggedIn = {toggleIsLoggedIn} />}  />
         <Route exact path='/signup' element={<Signup displayAlert = {displayAlert} toggleIsLoggedIn = {toggleIsLoggedIn}/> } />

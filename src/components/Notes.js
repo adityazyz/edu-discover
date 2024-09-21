@@ -3,6 +3,8 @@ import noteContext from '../context/notes/noteContext'
 import AddNote from './AddNote'
 import ShowNote from './ShowNote'
 import { useNavigate} from 'react-router-dom'
+import TestForm from './TestForm'
+import Gemini from './Gemini'
 
 const Notes =(props)=> {
     const context = useContext(noteContext);
@@ -23,8 +25,8 @@ const Notes =(props)=> {
     <div className='mt-3'>
       {/* // div below only present when there is no alert message  */}
     <div style={{height : (!props.emptyDivNeeded)?"0vh":"8vh"}}></div>
-    <AddNote displayAlert = {props.displayAlert}/>
-    <ShowNote displayAlert = {props.displayAlert}/>
+    <TestForm/>
+    {/* <Gemini/> */}
     </div>
   )
 }

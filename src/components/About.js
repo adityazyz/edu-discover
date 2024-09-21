@@ -8,8 +8,10 @@ const About= ()=> {
     <div className='aboutBgImg'>
       <div className="container p-3">
       <h1 className="mt-3 mb-4" style = {{color : 'white'}}>About Us</h1>
-      <p style = {{color : 'white',fontSize:"1em"}}>Cloud-Notes is an online place for everyone to store and manage their notes.</p>
-      <p style = {{color : 'white',fontSize:"1em"}}> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit vel rem explicabo possimus voluptatem nam, dolorem asperiores accusamus. Accusantium totam id suscipit voluptatem. Sed maxime nihil praesentium libero earum nemo fugiat recusandae impedit ducimus saepe natus fuga beatae eveniet dolorem excepturi enim aperiam, distinctio reiciendis velit architecto repudiandae corrupti asperiores?</p>
+      <p style = {{color : 'white',fontSize:"1em"}}>Edu Discover is a goto platform for </p>
+      <p style = {{color : 'white',fontSize:"1em"}}> {`Welcome to *Edu Discover*—your trusted partner in making informed and confident career choices. In a world filled with endless opportunities, selecting the right path can feel overwhelming. That’s where we come in.
+
+At *Edu Discover*, we believe that your career should align with your passions, skills, and personality. Our platform combines science-backed assessments with industry insights to help students and professionals alike discover careers they’ll thrive in. Whether you’re in school, college, or looking for a change, we offer personalized guidance tailored just for you.`}</p>
       <p className = "mt-5"style = {{color : 'white',fontSize:"1em"}}>Developer - Aditya Dagar</p>
       {/* <!-- Facebook icon --> */}
       <a href="https://www.facebook.com/adiidagarrr/" target={'_blank'} rel="noreferrer"><i className="fab fa-facebook-f border rounded p-1 me-3" style = {{color : 'white'}} ></i></a>

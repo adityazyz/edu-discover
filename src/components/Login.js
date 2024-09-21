@@ -18,13 +18,15 @@ const Login = (props) => {
     const handleSubmit = async(e)=>{
         e.preventDefault();
 
+        const reqBody = {email : cred.email,password : cred.password};
+        console.log(reqBody);
         // making req to 
         const response = await fetch(`http://localhost:3700/api/auth/login`, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             headers: {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({email : cred.email,password : cred.password}) // body data type must match "Content-Type" header
+            body: JSON.stringify(reqBody) // body data type must match "Content-Type" header
         });
         const json = await response.json()
         console.log(json);
@@ -33,7 +35,7 @@ const Login = (props) => {
             // store auth Token in local storage to use later ...and redirect
             localStorage.setItem("token",json.authToken);
             // redirecting using useNavigate() hook from react-router-dom
-            navigate("/notes");
+            navigate("/quiz");
             props.displayAlert("Welcome back !", "Success");
             // set is loggedin to true (to manipulate navbar)
             props.toggleIsLoggedIn();
