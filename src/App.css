@@ -1,24 +1,52 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+.App {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-@keyframes logo-spin {
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* =========================  */
+.topMargin{
+  margin-top: 9vh;
+}
+a{
+  text-decoration: none;
+}
+.edit{
+  color : rgb(24, 115, 179);
+}
+.delete{
+  color: rgb(230, 84, 84);
+ 
+}
+
+/* ========================   */
+
+@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -27,16 +55,57 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+ /* note item width  */
+.itemWidth{
+  width : 40vw;
+}
+
+/* //// for login form  */
+.gradient-custom-login {
+  /* fallback for old browsers */
+  background: #41d481;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgb(75, 227, 80), rgba(37, 117, 252, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(75, 227, 80), rgba(37, 117, 252, 1))
   }
+
+  .gradient-custom-signup {
+    /* fallback for old browsers */
+    background: rgb(172, 131, 215);
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(172, 131, 215), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(172, 131, 215), rgba(37, 117, 252, 1))
+    }
+
+
+/* removing bottom margin from alert component  */
+.alert{
+  margin-bottom: 0px;
 }
 
-.card {
-  padding: 2em;
+
+.aboutBgImg{
+  z-index: -1;
+  height: 90vh;
+  background-image: url("https://images.unsplash.com/photo-1497091071254-cc9b2ba7c48a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80")
 }
 
-.read-the-docs {
-  color: #888;
+
+.Wwidth{
+  width : 90%
 }
+
+.welcomePageText-1{
+  font-size: 20vh;
+}
+
+.welcomePageText-2{
+  font-size: 10vh;
+}
+
